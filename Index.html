@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeX</title>
+    <link rel="icon" href="assets/Logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase SDKs -->
+    <script defer src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js"></script>
+
+    <!-- Custom Script -->
+    <script defer src="script_INDEX.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <a href="#">
+                <img src="assets/Logo.png" alt="SafeX Logo" class="logo" />
+            </a>
+            <h1 class="name">SafeX</h1>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <button id="new-tweet-button">New Tweet</button>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- New Tweet Button -->
+        
+    </header>
+
+    <!-- Popup for New Tweet -->
+    <div id="tweet-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup">&times;</span>
+            <textarea id="tweet-input" placeholder="What's on your mind?"></textarea>
+            <input id="tags-input" placeholder="Add tags (comma-separated)" />
+            <button id="post-tweet">Post</button>
+        </div>
+    </div>
+
+    <!-- Popup for Viewing Tweet -->
+    <div id="view-tweet-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-view-popup">&times;</span>
+            <p id="view-tweet-content"></p>
+            <div id="view-tweet-tags" class="tags"></div>
+            <span id="view-tweet-timestamp" class="timestamp"></span>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <!-- Container for displaying tweets -->
+        <div id="tweets-container" class="tweets-container">
+            <p>Loading tweets...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SafeX. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
